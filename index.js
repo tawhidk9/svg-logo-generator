@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateLogo = require('./utils/generatelogo.js')
 
-//user questions to generate logo 
+
 const questions = [
     {
         name: "text",
@@ -27,7 +27,7 @@ const questions = [
     },
 ];
 
-//function to write file with console message
+
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
@@ -36,7 +36,7 @@ function writeToFile(fileName, data) {
 
 }
 
-//function that will restart questions if user inputs more than 3 characters
+
 const handleAnswers = (answers) => {
     if (answers.text.length > 3) {
         console.log("Text must be at most 3 characters");
