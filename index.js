@@ -39,7 +39,7 @@ function writeToFile(fileName, data) {
 //function that will restart questions if user inputs more than 3 characters
 const handleAnswers = (answers) => {
     if (answers.text.length > 3) {
-        console.log("Text must be less than 3 characters");
+        console.log("Text must be at most 3 characters");
         init();
       } else {
         writeToFile('logo.svg', generateLogo(answers));
@@ -48,7 +48,8 @@ const handleAnswers = (answers) => {
 
 function init() {
     inquirer
-  .prompt(questions).then(handleAnswers);
+  .prompt(questions)
+  .then(handleAnswers);
 };
 
 init();
