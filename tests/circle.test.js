@@ -1,5 +1,5 @@
-const Circle = require("./circle.js");
-const Shape = require("./shapes.js")
+const Circle = require("../lib/circle.js");
+const Shape = require("../lib/shapes.js")
 
 describe("Red Circle with White Text", () => {
     describe("render", () => {
